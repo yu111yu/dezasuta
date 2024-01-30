@@ -1,0 +1,28 @@
+@charset"utf-8";
+/*1.幅960pxの中に300pxの青い四角形を等間隔で3つ並べる*/
+.wrap{
+    display: flex;
+    max-width:960px;
+    margin:0 auto;
+    justify-content:space-between;
+}
+.wrap>div{
+    background:#000fff;
+    height:300px;
+    width:300px;
+    margin:20px 0;
+}
+/*-2.幅960pxの中に300pxの赤い四角形を等間隔で6つ並べ、4つ目で折り返す*/
+.wrap2{
+    display: flex;
+    max-width:960px;
+    margin:0 auto;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.wrap2>div{
+    background: #f00;
+    height:300px;
+    width:300px;
+    margin-bottom: 20px;
+}
