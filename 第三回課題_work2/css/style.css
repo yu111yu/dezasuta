@@ -63,7 +63,7 @@ h2{
     justify-content: space-around;
 }
 .box{
-    width:270px;
+    width:31.25%;
     height:auto;
 }
 .subtitle{
@@ -84,17 +84,15 @@ h3{
 @media screen and (max-width: 767px){
 section{
    padding-bottom: 10px;
-
 }
 .wrap{
     display:block;
 }
 .box{
     padding-bottom: 20px;
-    margin: 0 auto;
     width: 100%;
 }
-box>img{
+.box>img{
     width: 100%;
 }
 }
