@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #4f260b;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+
+body{
+    background: #555;
+    padding:0 10px;
+}
+/*ヘッダー*/
+.header{
+    position:relative;
+}
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.51%;
+    padding-right: 6.53%;
+    padding-top: 10px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.logo{
+    width: 226.7px;
+}
+.pc-nav ul{
+    display: flex;
+}
+.pc-nav ul li{
+    width:105px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 53px;
+    font-family:"游明朝体" ,  "游明朝" , YuMincho ,  "ヒラギノ明朝 Pro" ,  "ヒラギノ明朝 Pro" ,  "MS P明朝" ,  "MS P明朝" , serif;
+}
+.pc-nav ul li:last-child{
+    margin-right: 0;
+}
+.slider img{
+    width: 100%;
+}
+/*メイン*/
+main{
+    background: #e8d9bf;
+}
+/*タイトル*/
+.title{
+    text-align: center;
+    padding: 108px 0 98px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.title p:nth-child(1){
+    font-size: 30px;
+}
+h2{
+    font-size: 82px;
+    padding: 60px 0 50px;
+    line-height: 1.170;
+}
+.title p:last-child{
+    font-size: 23px;
+}
+/*ABOUT US*/
+.aboutus{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.aboutus>img{
+    max-width:500px;
+    margin: 0 auto;
+    border-radius: 0 0 50px 0;
+    object-fit: cover;
+}
+.about-box{
+    max-width:500px;
+    margin: 0 auto;
+    padding-left:84px;
+}
+#aboutus{
+    width:272.39px;
+    padding:68px 160px 57px 0;
+    }
+span{
+    font-size: 44px;
+    line-height: 1.386;
+}
+.aboutus p{
+    font-size: 16px;
+    width:410px;
+    padding: 40px 0;
+}
+/*MENU*/
+.menu{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 108px 0 100px 0;
+}
+#menu{
+    margin: 0 auto;
+    width:151.3853px;
+    padding-bottom: 48px;
+}
+.box-wrap{
+    display: flex;
+}
+.box{
+    width:300px;
+}
+.box:nth-child(2){
+    margin:0 50px 0 50px;
+}
+.box img{
+    border-radius: 0 50px 0 0;
+    position:relative;
+    padding-bottom: 45px;
+}
+
+.box h4{
+    font-size: 38px;
+    color: #d30202;
+    line-height: 0.5789;
+    position: absolute;
+    top:275%;
+}
+.box p{
+    font-size: 17px;
+}
+/*gallery*/
+#gallery{
+    width:245.1846px;
+    margin: 0 auto;
+    padding-bottom: 26px;
+}
+.gallery img{
+    width:384px;
+    /* max-width: 100%; */
+}
+.gallery ul{
+    display: flex;
+}
+.gallery li{
+    width:calc(100%/5);
+}
+/*EVENT*/
+#event{
+    width: 173.8252px;
+    margin: 0 auto;
+    padding:72px 0 40px 0;
+}
+.event-wrap{
+    border: 3.6843px solid #000;
+    width:1000px;
+    height: 200px;
+    background:#fff;
+    margin: 0 auto;
+}
+.event-wrap ul{
+    padding:38px 0 43px 159px;
+}
+.event-wrap li{
+    display: flex;
+    margin: 0 auto;
+    font-size: 23px;
+    padding-bottom: 28px;
+}
+.date{
+    padding-right: 48px;
+}
+.text{
+    text-decoration: underline;
+}
+/*ACCESS*/
+#access{
+    width: 213.8354px;
+    margin: 0 auto;
+    padding: 79px 0 46px 0;
+}
+iframe{
+    width:100%;
+    height:471.2641px;
+}
+/*フッター*/
+footer{
+    background: #fff;
+}
+.footer-wrap>img{
+    width: 226.7686px;
+    height: 50.2852px;
+    padding:82px 68px 0 463px;
+}
+.footer-wrap{
+    display: flex;
+}
+.access{
+    font-size: 20px;
+    line-height: 2em;
+    padding-top: 85px;
+    text-align: left;
+}
+.copy{
+    font-size: 16px;
+    text-align: center;
+    padding: 78px 0;
+}
+#pagetop{
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    width: 125px;
+}
