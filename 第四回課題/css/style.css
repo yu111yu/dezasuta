@@ -9,6 +9,7 @@ section,
 h1,
 h2,
 h3,
+h4,
 ul,
 li,
 p,
@@ -80,7 +81,8 @@ body{
     font-size: 18px;
     font-weight: bold;
     margin-right: 53px;
-    font-family:"游明朝体" ,  "游明朝" , YuMincho ,  "ヒラギノ明朝 Pro" ,  "ヒラギノ明朝 Pro" ,  "MS P明朝" ,  "MS P明朝" , serif;
+    font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 .pc-nav ul li:last-child{
     margin-right: 0;
@@ -106,9 +108,11 @@ h2{
     font-size: 82px;
     padding: 60px 0 50px;
     line-height: 1.170;
+    font-weight: normal;
 }
 .title p:last-child{
     font-size: 23px;
+    line-height: 1.6521;
 }
 /*ABOUT US*/
 .aboutus{
@@ -117,7 +121,7 @@ h2{
     margin: 0 auto;
 }
 .aboutus>img{
-    max-width:500px;
+    width:500px;
     margin: 0 auto;
     border-radius: 0 0 50px 0;
     object-fit: cover;
@@ -139,6 +143,7 @@ span{
     font-size: 16px;
     width:410px;
     padding: 40px 0;
+    line-height: 1.625;
 }
 /*MENU*/
 .menu{
@@ -162,19 +167,18 @@ span{
 }
 .box img{
     border-radius: 0 50px 0 0;
-    position:relative;
-    padding-bottom: 45px;
 }
 
 .box h4{
     font-size: 38px;
     color: #d30202;
-    line-height: 0.5789;
-    position: absolute;
-    top:275%;
+    margin-top: -20px;
+    font-weight: normal;
 }
 .box p{
     font-size: 17px;
+    line-height: 1.470;
+    padding-top: 24px;
 }
 /*gallery*/
 #gallery{
@@ -184,7 +188,6 @@ span{
 }
 .gallery img{
     width:384px;
-    /* max-width: 100%; */
 }
 .gallery ul{
     display: flex;
@@ -200,7 +203,7 @@ span{
 }
 .event-wrap{
     border: 3.6843px solid #000;
-    width:1000px;
+    max-width:1000px;
     height: 200px;
     background:#fff;
     margin: 0 auto;
@@ -222,13 +225,15 @@ span{
 }
 /*ACCESS*/
 #access{
-    width: 213.8354px;
+    max-width: 213.8354px;
     margin: 0 auto;
     padding: 79px 0 46px 0;
 }
 iframe{
     width:100%;
     height:471.2641px;
+    display: block;
+
 }
 /*フッター*/
 footer{
@@ -244,9 +249,9 @@ footer{
 }
 .access{
     font-size: 20px;
-    line-height: 2em;
     padding-top: 85px;
     text-align: left;
+    line-height: 1.95;
 }
 .copy{
     font-size: 16px;
