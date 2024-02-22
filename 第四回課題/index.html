@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>cafe site</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,17 +22,32 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+
+            <div class="humberger"><span></span></div>
+            <nav class="sp-nav">
+                <ul>
+                    <li><a href="#aboutus">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="slider">
-            <p><img src="images/pc_first-100.jpg" alt="カフェの様子"> </p>
+            <p>
+                <picture>
+                    <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </p>
         </div>
     </header>
     <main>
         <section class="title">
             <p>Have a happy day From a cup of coffee.</p>
-            <h2>ハッピーに溢れる1日を<br>
+            <p>ハッピーに溢れる1日を<br>
                 1杯のコーヒーから。
-            </h2>
+            </p>
             <p>毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
             </p>
@@ -39,10 +55,10 @@
         <section class="aboutus">
             <img src="images/about_us@2x-100.jpg" alt="皆でコーヒー">
             <div class="about-box">
-                <h3 id="aboutus"><img src="images/about_us@2x.png" alt="about us"></h3>
-                <span>私たちが提供する<br>
+                <h2 id="aboutus"><img src="images/about_us@2x.png" alt="about us"></h2>
+                <p>私たちが提供する<br>
                     こだわりのコーヒー
-                </span>
+                </p>
                 <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
@@ -52,23 +68,24 @@
             </div>
         </section>
         <section class="menu">
-            <h3 id="menu"><img src="images/menu@2x.png" alt=" menu"></h3>
+            <h2 id="menu"><img src="images/menu@2x.png" alt=" menu"></h2>
             <div class="box-wrap">
                 <div class="box">
                     <img src="images/pc_menu_drink-100.jpg" alt="飲み物">
-                    <h4>Drink</h4>
+                    <h3>Drink</h3>
                     <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="box">
                     <img src="images/pc_menu_food-100.jpg" alt="食事">
-                    <h4>Food</h4>
+                    <h3>Food</h3>
                     <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="box">
                     <img src="images/pc_menu_sweets-100.jpg" alt="ケーキ">
-                    <h4>Cake</h4>
+                    <h3>Cake</h3>
                     <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
+            </div>
         </section>
         <section class="gallery">
             <h3 id="gallery"><img src="images/gallery@2x.png" alt="gallery"></h3>
@@ -81,7 +98,7 @@
             </ul>
         </section>
         <section class="event">
-            <h3 id="event"><img src="images/event@2x.png" alt="event"></h3>
+            <h2 id="event"><img src="images/event@2x.png" alt="event"></h2>
             <div class="event-wrap">
                 <ul>
                     <li>
@@ -112,7 +129,7 @@
             </div>
         </section>
         <section class="access">
-            <h3 id="access"><img src="images/access@2x.png" alt="access"></h3>
+            <h2 id="access"><img src="images/access@2x.png" alt="access"></h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.0806533878!2d139.7016358!3d35.6580339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1708443914757!5m2!1sja!2sjp"
                 style="border:0;" allowfullscreen="" loading="lazy"
@@ -121,7 +138,7 @@
         <footer>
             <div class="footer-wrap">
                 <img src="images/design_cafe_logo_footer@2x.png" alt="ロゴ">
-                <p class="access">
+                <p>
                     OPEN 18:00 / CLOSE 24:00<br>
                     〒150-0022<br>
                     東京都渋谷区東京南123デザインビルB1<br>
@@ -134,6 +151,15 @@
         </footer>
     </main>
 
+    <script>
+        $(function () {
+            // ハンバーガーメニュー
+            $('.humberger').on('click', function () {
+                $('.sp-nav').fadeToggle();
+                $('.humberger').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

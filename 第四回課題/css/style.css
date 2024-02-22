@@ -46,12 +46,6 @@ img {
     vertical-align: bottom;
     border: none;
 }
-
-
-body{
-    background: #555;
-    padding:0 10px;
-}
 /*ヘッダー*/
 .header{
     position:relative;
@@ -101,16 +95,16 @@ main{
     max-width: 1000px;
     margin: 0 auto;
 }
-.title p:nth-child(1){
+.title p:nth-of-type(1){
     font-size: 30px;
 }
-h2{
+.title p:nth-of-type(2){
     font-size: 82px;
     padding: 60px 0 50px;
     line-height: 1.170;
     font-weight: normal;
 }
-.title p:last-child{
+.title p:nth-child(3){
     font-size: 23px;
     line-height: 1.6521;
 }
@@ -121,13 +115,13 @@ h2{
     margin: 0 auto;
 }
 .aboutus>img{
-    width:500px;
+    width:50%;
     margin: 0 auto;
     border-radius: 0 0 50px 0;
     object-fit: cover;
 }
 .about-box{
-    max-width:500px;
+    width:41%;
     margin: 0 auto;
     padding-left:84px;
 }
@@ -135,13 +129,12 @@ h2{
     width:272.39px;
     padding:68px 160px 57px 0;
     }
-span{
+.aboutus p:nth-of-type(1){
     font-size: 44px;
     line-height: 1.386;
 }
-.aboutus p{
+.aboutus p:nth-of-type(2){
     font-size: 16px;
-    width:410px;
     padding: 40px 0;
     line-height: 1.625;
 }
@@ -149,7 +142,7 @@ span{
 .menu{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 108px 0 100px 0;
+    padding: 108px 10px 100px 10px;
 }
 #menu{
     margin: 0 auto;
@@ -158,22 +151,21 @@ span{
 }
 .box-wrap{
     display: flex;
+    justify-content: space-between;
 }
 .box{
-    width:300px;
-}
-.box:nth-child(2){
-    margin:0 50px 0 50px;
+    width:30%;
 }
 .box img{
     border-radius: 0 50px 0 0;
 }
 
-.box h4{
+.box h3{
     font-size: 38px;
     color: #d30202;
-    margin-top: -20px;
+    margin-top: -12px;
     font-weight: normal;
+    padding-left: 13px;
 }
 .box p{
     font-size: 17px;
@@ -204,7 +196,6 @@ span{
 .event-wrap{
     border: 3.6843px solid #000;
     max-width:1000px;
-    height: 200px;
     background:#fff;
     margin: 0 auto;
 }
@@ -215,7 +206,10 @@ span{
     display: flex;
     margin: 0 auto;
     font-size: 23px;
-    padding-bottom: 28px;
+    padding-bottom: 23px;
+}
+.event-wrap li:nth-of-type(3){
+    padding-bottom: 0;
 }
 .date{
     padding-right: 48px;
@@ -239,17 +233,19 @@ iframe{
 footer{
     background: #fff;
 }
+.footer-wrap{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 83px;
+}
 .footer-wrap>img{
     width: 226.7686px;
     height: 50.2852px;
-    padding:82px 68px 0 463px;
 }
-.footer-wrap{
-    display: flex;
-}
-.access{
+.footer-wrap p:nth-of-type(1){
     font-size: 20px;
-    padding-top: 85px;
+    padding-left:68px;
     text-align: left;
     line-height: 1.95;
 }
@@ -263,4 +259,84 @@ footer{
     bottom: 20px;
     right:20px;
     width: 125px;
+}
+/* ハンバーガーメニューを消す */
+.humberger,
+.sp-nav{
+    display: none;
+}
+@media screen and (max-width:1100px){
+    .pc-nav{
+        display: none;
+    }
+    .humberger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+        height:33px;
+        z-index: 999;
+    }
+    .humberger span{
+        width: 33px;
+        height:3px;
+        background: #fff;
+        display: block;
+        position: relative;
+        top:10px;
+        transition: 0.3s;
+    }
+    .humberger span::before,
+    .humberger span::after{
+        width: 33px;
+        height:3px;
+        background: #fff;
+        display: block;
+        content:"";
+        position: absolute;
+        transition: 0.3s;
+    }
+    .humberger span::before{
+        bottom: 10px;
+    }    
+    .humberger span::after{
+        top:10px;
+    }
+    .open span{
+        background: transparent;
+    }
+    .open span::before{
+        bottom: 0;
+        transform: rotate(45deg);
+    }    
+    .open span::after{
+        top:0;
+        transform: rotate(135deg);
+    }
+    .sp-nav{
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100vh;
+    }
+    .sp-nav ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sp-nav ul li{
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+.sp-nav ul li a{
+    display: block;
+    padding: 10px 0;
+}
 }
