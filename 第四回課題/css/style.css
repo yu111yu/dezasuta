@@ -211,7 +211,7 @@ main{
 .event-wrap li:nth-of-type(3){
     padding-bottom: 0;
 }
-.date{
+time{
     padding-right: 48px;
 }
 .text{
